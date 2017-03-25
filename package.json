@@ -1,0 +1,8 @@
+{
+  "name": "webpack-tests",
+  "version": "0.0.1",
+  "description": "A playground webpack repo using Yarn, Docker and Webpack for dev and prod.",
+  "main": "index.js",
+  "author": "Marcos J. Alvarez <garusis@gmail.com>",
+  "license": "MIT"
+}
