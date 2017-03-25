@@ -8,3 +8,4 @@ services:
      - "3000:${PORT}"
     volumes:
      - .:/app
+     - /root/.yarn-cache

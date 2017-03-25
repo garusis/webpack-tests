@@ -4,8 +4,11 @@
   "description": "A playground webpack repo using Yarn, Docker and Webpack for dev and prod.",
   "main": "index.js",
   "scripts": {
-    "compose":"./development.sh"
+    "compose": "./development.sh"
   },
   "author": "Marcos J. Alvarez <garusis@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^2.3.2"
+  }
 }
