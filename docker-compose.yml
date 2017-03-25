@@ -7,5 +7,5 @@ services:
     ports:
      - "3000:${PORT}"
     volumes:
-     - .:/app
-     - /root/.yarn-cache
+     - ".:/app"
+     - "${YARN_CACHE_DIR}:/root/.yarn-cache"
