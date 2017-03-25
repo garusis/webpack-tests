@@ -58,4 +58,8 @@ typings/
 
 # dotenv environment variables file
 .env
+
+#code-editors
+.idea
+
 development.sh

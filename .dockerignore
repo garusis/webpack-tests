@@ -44,5 +44,8 @@ jspm_packages/
 # Yarn Integrity file
 .yarn-integrity
 
+#code-editors
+.idea
+
 docker
 development.sh
