@@ -2,8 +2,9 @@
   "name": "webpack-tests",
   "version": "0.0.1",
   "description": "A playground webpack repo using Yarn, Docker and Webpack for dev and prod.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node .",
     "compose": "./development.sh"
   },
   "author": "Marcos J. Alvarez <garusis@gmail.com>",

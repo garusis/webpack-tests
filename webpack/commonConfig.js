@@ -1,13 +1,21 @@
+"use strict"
 /**
  * Created by garusis on 25/03/17.
  */
 const ENV = process.env
 const metadata = {
-  PORT: 3000
+  PORT: 3000,
+  NODE_ENV: "development",
+  APP_ENV: "development"
 }
+const stringify = {}
 
 for (let key in ENV) {
-  metadata[key] = JSON.stringify(ENV[key])
+  metadata[key] = ENV[key]
 }
 
-module.exports = metadata
+for (let key in metadata) {
+  stringify[key] = JSON.stringify(metadata[key])
+}
+
+module.exports = {object: metadata, stringify}

@@ -7,4 +7,4 @@ WORKDIR /app
 
 RUN rm -rf node_modules && yarn && cd node_modules/webpack && yarn link && \
     cd ../webpack-dev-server && yarn link
-ENTRYPOINT webpack-dev-server --port $PORT --content-base ./dist/index.html
+ENTRYPOINT webpack-dev-server --port $PORT --content-base
