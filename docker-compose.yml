@@ -12,4 +12,3 @@ services:
     environment:
      - NODE_ENV=${APP_ENV}
      - APP_ENV=${APP_ENV}
-     - PORT=3000
