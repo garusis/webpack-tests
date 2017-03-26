@@ -9,3 +9,6 @@ services:
     volumes:
      - ".:/app"
      - "${YARN_CACHE_DIR}:/root/.yarn-cache"
+    environment:
+     - NODE_ENV=${APP_ENV}
+     - APP_ENV=${APP_ENV}
