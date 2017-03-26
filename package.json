@@ -5,7 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "node .",
-    "compose": "./development.sh"
+    "compose": "./development.sh",
+    "ps:run": "docker ps -q --filter \"name=webpacktests_app\" --filter \"status=running\"",
+    "ps:exit": "docker ps -aq --filter \"status=exited\" --filter=\"name=webpacktests_app\"",
+    "bash": "docker exec -i -t $(npm run -s ps:run --latest) bash",
+    "prune": "docker rm $(npm run -s ps:exit)"
   },
   "author": "Marcos J. Alvarez <garusis@gmail.com>",
   "license": "MIT",
