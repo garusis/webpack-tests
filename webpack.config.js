@@ -1,9 +1,8 @@
 const path = require("path")
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-console.log("&&&&&&&&&&&&&&&&&&&&&&")
-console.log(process.env.NODE_ENV)
-console.log("&&&&&&&&&&&&&&&&&&&&&&")
+const metadata = require("./webpack/commonConfig")
 
 module.exports = {
   entry: "./src/app.js",
@@ -11,9 +10,14 @@ module.exports = {
     path: path.join(process.cwd(), "dist"),
     filename: "assets/app.js"
   },
+  watch: true,
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.ejs'
     })
   ]
 }
+
+new webpack.DefinePlugin({
+  'process.env': metadata
+})

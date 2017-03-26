@@ -5,10 +5,11 @@ services:
       context: .
       dockerfile: ./docker/Dockerfile.${APP_ENV}
     ports:
-     - "3000:${PORT}"
+     - ${PORT}:3000
     volumes:
-     - ".:/app"
-     - "${YARN_CACHE_DIR}:/root/.yarn-cache"
+     - .:/app
+     - ${YARN_CACHE_DIR}:/root/.yarn-cache
     environment:
      - NODE_ENV=${APP_ENV}
      - APP_ENV=${APP_ENV}
+     - PORT=3000
