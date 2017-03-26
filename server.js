@@ -8,7 +8,7 @@ const path = require("path")
 const metadata = require("./webpack/commonConfig").object
 const webpackConfig = require("./webpack.config")
 
-webpackConfig.entry.app.unshift(`webpack-dev-server/client?http://127.0.0.1:${metadata.PORT}/`)
+webpackConfig.entry.app.unshift(`webpack-dev-server/client?http://127.0.0.1:${metadata.DEV_PORT}/`)
 
 const compiler = webpack(webpackConfig)
 const server = new WebpackDevServer(compiler, {
