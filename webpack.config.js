@@ -45,12 +45,12 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        loader: libsExtractor.extract(["css-loader", "autoprefix-loader"])
+        loader: libsExtractor.extract(["css-loader", "autoprefixer-loader"])
       },
       {
         test: /\.less$/,
         exclude: /node_modules/,
-        loader: modulesExtractor.extract(["css-loader", "autoprefix-loader", "less-loader"])
+        loader: modulesExtractor.extract(["css-loader", "autoprefixer-loader", "less-loader"])
       }
     ]
   },
