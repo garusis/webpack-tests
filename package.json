@@ -1,6 +1,6 @@
 {
   "name": "webpack-tests",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A playground webpack repo using Yarn, Docker and Webpack for dev and prod.",
   "main": "server.js",
   "scripts": {
