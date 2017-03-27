@@ -1,6 +1,7 @@
 "use strict"
 import debug from "debug"
-import test from "./modules/test"
+import {} from "./modules"
+import {} from "./assets/css"
 
 const modDebug = debug("app:main")
 
