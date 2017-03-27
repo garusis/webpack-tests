@@ -11,6 +11,7 @@ module.exports = {
     "semi": [2, "never"]
   },
   "env": {
+    "es6": true,
     "browser": true,
     "commonjs": true
   }
