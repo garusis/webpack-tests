@@ -14,7 +14,7 @@ module.exports = {
     path: path.join(process.cwd(), "dist"),
     filename: "assets/app.js"
   },
-  watch: !metadata.productionMode,
+  watch: !metadata.object.productionMode,
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.ejs',

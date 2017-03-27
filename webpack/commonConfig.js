@@ -16,7 +16,6 @@ const defaults = {
 }
 
 const metadata = _.defaults({}, argv, ENV, defaults)
-console.log(metadata)
 
 const stringify = {}
 
