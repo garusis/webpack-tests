@@ -27,6 +27,7 @@
     "babel-loader": "^6.4.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-latest": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
     "babel-runtime": "^6.23.0",
     "css-loader": "^0.27.3",
     "debug": "^2.6.3",
