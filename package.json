@@ -15,7 +15,9 @@
     "preversion": "npm run build",
     "postversion": "git add -A && git commit --amend --no-edit",
     "git-push": "git push origin master --force && git push --follow-tags",
-    "release": "npm version $1 && npm run git-push"
+    "release-patch": "npm version patch && npm run git-push",
+    "release-minor": "npm version minor && npm run git-push",
+    "release-major": "npm version major && npm run git-push"
   },
   "author": "Marcos J. Alvarez <garusis@gmail.com>",
   "license": "MIT",
