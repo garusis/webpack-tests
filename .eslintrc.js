@@ -3,10 +3,15 @@ module.exports = {
     "ecmaVersion": 8,
     "sourceType": "module",
     "ecmaFeatures": {
-      "impliedStrict": true
+      "impliedStrict": true,
+      "jsx": true
     }
   },
   "rules": {
-    "semi": [2,"never"]
+    "semi": [2, "never"]
+  },
+  "env": {
+    "browser": true,
+    "commonjs": true
   }
 }

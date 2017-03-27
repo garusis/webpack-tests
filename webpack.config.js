@@ -20,7 +20,26 @@ module.exports = {
       env: metadata.object
     })
   ],
-  devServer: {inline: true}
+  devServer: {inline: true},
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
+      }
+    ],
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader"
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['.js', '.es6']
+  }
 }
 
 new webpack.DefinePlugin({
