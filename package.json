@@ -9,7 +9,12 @@
     "ps:run": "docker ps -q --filter \"name=webpacktests_app\" --filter \"status=running\"",
     "ps:exit": "docker ps -aq --filter \"status=exited\" --filter=\"name=webpacktests_app\"",
     "bash": "docker exec -i -t $(npm run -s ps:run --latest) bash",
-    "prune": "docker rm $(npm run -s ps:exit)"
+    "prune": "docker rm $(npm run -s ps:exit)",
+    "build": "webpack -p && git add -A && git commit --amend --no-edit",
+    "preversion": "npm run build",
+    "git-push": "git push origin master --force && git push --follow-tags",
+    "release": "npm version $1 && npm run git-push",
+    "echo": "npm version $1"
   },
   "author": "Marcos J. Alvarez <garusis@gmail.com>",
   "license": "MIT",
