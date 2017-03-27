@@ -3,12 +3,8 @@
  */
 const devConfig = require("./webpack.config")
 
-const stripLoader = {
-  test: /\.js$/,
-  exclude: /node_modules/,
-  loader: "strip-loader?strip[]=debug"
-}
+const stripLoader = "strip-loader?strip[]=debug,strip[]=console.log"
 
-devConfig.module.loaders.push(stripLoader)
+devConfig.module.rules[0].use.push(stripLoader)
 
 module.exports = devConfig

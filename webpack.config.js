@@ -23,18 +23,19 @@ module.exports = {
   ],
   devServer: {inline: true},
   module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "babel-loader"
-      }
-    ],
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "eslint-loader"
+        enforce: "pre",
+        use:[
+          "eslint-loader"
+        ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
       }
     ]
   },
