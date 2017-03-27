@@ -1,5 +1,6 @@
 "use strict"
 const path = require("path")
+
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -13,7 +14,7 @@ module.exports = {
     path: path.join(process.cwd(), "dist"),
     filename: "assets/app.js"
   },
-  watch: true,
+  watch: !metadata.productionMode,
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.ejs',
