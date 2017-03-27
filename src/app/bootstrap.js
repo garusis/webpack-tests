@@ -1,5 +1,6 @@
 "use strict"
 import debug from "debug"
+import test from "./modules/test"
 
 const modDebug = debug("app:main")
 
