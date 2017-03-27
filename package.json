@@ -20,6 +20,7 @@
   "author": "Marcos J. Alvarez <garusis@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "autoprefixer-loader": "^3.2.0",
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
     "babel-plugin-transform-runtime": "^6.23.0",

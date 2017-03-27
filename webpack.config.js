@@ -1,8 +1,8 @@
 "use strict"
 const path = require("path")
 
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require("webpack")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 const metadata = require("./webpack/commonConfig")
@@ -22,7 +22,7 @@ module.exports = {
     libsExtractor,
     modulesExtractor,
     new HtmlWebpackPlugin({
-      template: 'src/index.ejs',
+      template: "src/index.ejs",
       env: metadata.object
     })
   ],
@@ -45,20 +45,20 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        loader: libsExtractor.extract(['css-loader'])
+        loader: libsExtractor.extract(["css-loader", "autoprefix-loader"])
       },
       {
         test: /\.less$/,
         exclude: /node_modules/,
-        loader: modulesExtractor.extract(['css-loader', 'less-loader'])
+        loader: modulesExtractor.extract(["css-loader", "autoprefix-loader", "less-loader"])
       }
     ]
   },
   resolve: {
-    extensions: ['.js']
+    extensions: [".js"]
   }
 }
 
 new webpack.DefinePlugin({
-  'metadata': metadata.stringify
+  "metadata": metadata.stringify
 })
