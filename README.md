@@ -1,10 +1,11 @@
 # Webpack Tests
 
-   A playground webpack repo using Yarn, Docker and Webpack for dev and prod.
+  A playground webpack repo using Yarn, Docker, Webpack, Babel and 
+  ESLint for dev and prod.
 
 ## Requirements
-This project use Docker, and this is why you don't need more requirements
-that `docker`, `docker-compose` and `npm` or `yarn` (just if you want run the `compose` npm script... which I commend in development)
+  This project use Docker, and this is why you don't need more 
+  requirements that `docker`, `docker-compose` and `npm`.
 
 ## Run
 ### Development
