@@ -1,6 +1,8 @@
 "use strict"
-const debug = require("debug")("app:main")
+import debug from "debug"
+
+const modDebug = debug("app:main")
 
 document.write("Welcome to bla bla bla")
 
-debug("app loaded")
+modDebug("app loaded")
